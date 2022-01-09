@@ -1,0 +1,36 @@
+/**Given that an EMPLOYEE class contains following members: data members: Employee number, Employee name, Basic, DA, IT, Net Salary and print data members.**/
+
+#include<iostream>
+using namespace std;
+
+class EMPLOYEE
+{
+    public:
+    int emp_no;
+    string emp_name;
+    int basic;
+    int DA;
+    int IT;
+    int Netsalary;
+};
+int main()
+{
+    EMPLOYEE e;
+    cout<<"Enter the employee number ";
+    cin>>e.emp_no;
+    cout<<"Enter the employee name ";
+    cin>>e.emp_name;
+    cout<<"Enter the employee basic ";
+    cin>>e.basic;
+    e.DA = 0.52*(e.basic);
+    e.IT =0.3*(e.basic);
+    e.Netsalary = e.basic+e.DA-e.IT;
+    
+    cout<<"----Display the content----"<<endl;
+    cout<<"The employee number is : "<<e.emp_no<<endl;
+    cout<<"The employee name is : "<<e.emp_name<<endl;
+    cout<<"The employee basic is : "<<e.basic<<endl;
+    cout<<"The employee DA is : "<<e.DA<<endl;
+    cout<<"The employee IT is : "<<e.IT<<endl;
+    cout<<"The employee Netsalary is : "<<e.Netsalary<<endl;
+}
