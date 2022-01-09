@@ -1,0 +1,39 @@
+/**Write a C++ Program to display Names, Roll No., and grades of 3 students who have
+appeared in the examination. Declare the class of name, Roll No. and grade. Create an
+array of class objects. Read and display the contents of the array.**/
+
+#include<iostream>
+using namespace std;
+
+class Student
+{
+    public:
+        string name;
+        int rollno;
+        float cgpa;
+};
+int main()
+{
+    Student s[3];
+    int i;
+    for(i=0;i<3;i++)
+    {
+        cout<<"Enter the name of student"<< i+1<<endl;
+        cin>>s[i].name;
+        cout<<"Enter the rollno of student"<< i+1<<endl;
+        cin>>s[i].rollno;
+        cout<<"Enter the cgpa of student "<<i+1<<endl ;
+        cin>>s[i].cgpa;
+    }
+    cout<<"----Display the content----"<<endl;
+    for(i=0;i<3;i++)
+    {
+        cout<<"The name of student"<< i+1<<"is " ;
+        cout<<s[i].name<<endl;
+        cout<<"The rollno of student"<<i+1<<"is ";
+        cout<<s[i].rollno<<endl;
+        cout<<"The cgpa of student" << i+1<<"is " ;
+        cout<<s[i].cgpa<<endl;
+        cout<<"\n";
+    }
+}
