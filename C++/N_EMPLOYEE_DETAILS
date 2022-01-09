@@ -1,0 +1,50 @@
+/**Write a C++ program to read the data of N employee and compute Net salary of each employee (DA=52% of Basic and Income Tax (IT) =30% of the gross salary).**/
+
+
+#include<iostream>
+using namespace std;
+
+class EMPLOYEE
+{
+    public:
+    int emp_no;
+    string emp_name;
+    int basic;
+    int DA;
+    int IT;
+    int Netsalary;
+};
+int main()
+{
+    int n ,i;
+    cout<<"enter the number of EMPLOYEE : "<<endl;
+    cin>>n;
+    EMPLOYEE e[n];
+    for(i=0;i<n;i++)
+    {
+        cout<<"Enter the employee number ";
+        cin>>e[i].emp_no;
+        cout<<"Enter the employee name ";
+        cin>>e[i].emp_name;
+        cout<<"Enter the employee basic ";
+        cin>>e[i].basic;
+        cout<<"\n";
+       
+    }
+    
+    
+    
+   for(i=0;i<n;i++)
+   {
+        cout<<"----Display the content----"<<endl;
+        e[i].DA = 0.52*(e[i].basic);
+        e[i].IT =0.3*(e[i].basic);
+        e[i].Netsalary = e[i].basic+e[i].DA-e[i].IT; 
+        cout<<"The employee number is : "<<e[i].emp_no<<endl;
+        cout<<"The employee name is : "<<e[i].emp_name<<endl;
+        cout<<"The employee basic is : "<<e[i].basic<<endl;
+        cout<<"The employee DA is : "<<e[i].DA<<endl;
+        cout<<"The employee IT is : "<<e[i].IT<<endl;
+        cout<<"The employee Netsalary is : "<<e[i].Netsalary<<endl;
+   }
+}
