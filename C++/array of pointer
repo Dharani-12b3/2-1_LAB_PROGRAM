@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+#define max 100
+
+class employee
+{
+	string emp_name;
+	int emp_id;
+	int emp_salary; 
+	public:
+		void emp_get_info(int i)
+		{
+			cout<<"employee name : "<<endl;
+			cin>>emp_name;
+			cout<<"employee id : "<<endl;
+			cin>>emp_id;
+			cout<<"employee salary : "<<endl;
+			cin>>emp_salary;
+		}
+			void emp_display()
+		{
+			cout<<"employee name : "<<emp_name<<endl;
+			cout<<"employee id : "<<emp_id<<endl;
+			cout<<"employee salary : "<<emp_salary<<endl;
+		}
+};
+int main()
+{
+	employee emp[max],*ptr;
+    int class_size ,i;
+    ptr=emp;
+
+    cout<< "Enter the number of employees ( < " << max << "): ";
+    cin>> class_size;
+
+    for(i=1; i<=class_size; i++ )
+    {
+        (ptr+i)->emp_get_info(i);
+    }
+
+    cout<< endl << "***** Entered Employee data *****" << endl;
+
+    for(i=1; i<=class_size; i++ )
+    {
+        cout << "Employee" << i << endl;
+        (ptr+i)->emp_display();
+    }
+    return 0;
+}
