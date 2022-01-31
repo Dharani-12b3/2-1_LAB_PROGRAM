@@ -1,0 +1,32 @@
+// calling base class and derived class using pointers
+#include<iostream>
+using namespace std;
+class base
+{
+	public:
+		virtual void print()
+		{
+			cout<<"Base function"<<endl;
+		}
+};
+class Dervied : public base
+{
+	public:
+		void print()
+		{
+			cout<<"Derived function"<<endl;
+		}
+};
+int main()
+{
+	base*bp;
+	
+	Dervied derived1;
+	base*ptr=&derived1;
+	bp = new Dervied;
+	cout<<"Function call is decide at Runtime -"<<endl;
+          bp->print(); //Run time
+          cout<<"Function call is decided at Compile time -"<<endl;
+	ptr->print();//Compile time
+	return 0;
+}
