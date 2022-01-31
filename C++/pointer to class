@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+class pointer
+{
+    public:
+    int num1;
+    int num2;
+    int result;
+};
+int main()
+{
+    pointer obj;
+    pointer*ptr;
+    ptr = &obj;
+    cout<<"enter the num1: ";
+    cin>>ptr->num1;
+    cout<<"enter the num2: ";
+    cin>>ptr->num2;
+    ptr->result = ptr->num1+ptr->num2;
+    cout<<"the first operand :"<<ptr->num1<<endl;
+    cout<<"the second operand :"<<ptr->num2<<endl;
+    cout<<"addition of two number is :"<<ptr->result<<endl;
+    return 0 ;
+}
