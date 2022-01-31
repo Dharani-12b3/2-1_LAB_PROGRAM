@@ -1,0 +1,31 @@
+// late binding
+#include<iostream>
+using namespace std;
+
+class base
+{
+	public:
+		virtual void s()
+		{
+			cout << "This is parent class" << endl;
+		}
+};
+
+class derived : public base
+{
+	public:
+		void s()
+		{
+			cout<<"late binding"<<endl;
+			cout << "this dervied class" << endl;
+		}
+};
+int main()
+{
+	base*a;
+	derived d;
+	a=&d;
+	a->s();
+	return 0;
+	
+}
