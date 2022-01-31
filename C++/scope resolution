@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+
+char a[20] = "Dharani";
+int main()
+{
+    char a[20] = "Gayathri";
+    cout<<::a<<endl;
+    cout<<a<<endl;
+}
