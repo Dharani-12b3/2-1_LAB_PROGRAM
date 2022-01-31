@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+
+class A
+{
+    public:
+    int x,y;
+    int X,Y;
+    A()
+    {
+        cout<<" Default constructor is invoked"<<endl;
+    }
+    A(int a,int b)
+    {
+        cout<<"Parameterised constructor is invoked"<<endl;
+        x=a;
+        y=b;
+        cout<<" x+y = "<<x+y<<endl;
+        cout<<" x-y = "<<x-y<<endl;
+    }
+    A(const A &obj)
+    {
+        cout<<"Copy constructor is invoked"<<endl;
+        X = obj.x;
+        Y = obj.y;
+        cout<<" X+Y = "<<X+ Y<<endl;
+        cout<<" X-Y = "<<X-Y<<endl;
+    }
+    ~A()
+    {
+        cout<<"Destructor is called"<<endl;
+    }
+};
+int main()
+{
+    Aobj;
+    A obj1(70,10);
+    A obj2(45,35);
+    A obj3(obj1);
+}
