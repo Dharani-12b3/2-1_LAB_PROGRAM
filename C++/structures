@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+struct Student
+{
+    string name;
+    int roll_no;
+    float cgpa;
+};
+int main()
+{
+    Student s;
+    cout<<"Enter the name ";
+    cin>>s.name;
+    cout<<"Enter the rollno ";
+    cin>>s.roll_no;
+    cout<<"Enter the cgpa ";
+    cin>>s.cgpa;
+}
