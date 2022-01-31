@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class A{
+    private:
+    int a,b;
+    public:
+     void init() { 
+         a = 10;
+         b = 20;
+     }
+     friend class B;
+};
+
+class B{
+    public:
+    void display(A &x){
+        cout<<("Using friend class accesssing the private members a and b of class A")<<endl;
+        cout<<"a is "<<x.a<<endl;
+        cout<<"b is "<<x.b<<endl;
+    }
+};
+
+int main()
+{
+    A objA;
+    B objB;
+    objA.init();
+    objB.display(objA);
+    return 0;
+}
