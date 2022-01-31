@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int *P;
+    P = new int ;
+    *P = 45;
+    cout<<"the value stored in newly creted memory using NEW is : "<<*P<<endl;
+    delete P;
+    return 0;
+}
